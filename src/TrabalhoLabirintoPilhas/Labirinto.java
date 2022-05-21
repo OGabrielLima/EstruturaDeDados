@@ -16,10 +16,15 @@ public class Labirinto {
     //Crio a tabela do meu labirinto
     public String[][] criaTabela(){
         String[][] tabLabirinto = new String[11][11];
+        //String[0][0] = 0
+        //[ [0,1,2,3],
+        //  [0,1,5,6]  ]
         //Preencho a lista
-        for (int col = 0; col < tabLabirinto.length; col++) {
-            for (int lin = 0; lin < tabLabirinto.length; lin++) {
-                tabLabirinto[col][lin] = "#";
+        for (int lin = 0; lin < tabLabirinto.length; lin++) {
+            for (int col = 0; col < tabLabirinto.length; col++) {
+                //Strint[2][0]
+                //String[2][1];;;
+                tabLabirinto[lin][col] = "#";
             }
         }
         return criaTrilhaLabirinto(tabLabirinto);
@@ -89,7 +94,7 @@ public class Labirinto {
     //Movo o labirinto valida a posição (computador descobre o caminho)
     public String[][] doMoverValidandoPosicao(String[][] labirinto){
         //Valido se devo finalizar o programa
-        for (int i = 0; i <= 3; i++) {
+        for (int i = 0; i <= 3; i++) { //4 posicoes
             int x = getIdxLin();
             int y = getIdxCol();
             //Seleciono as opções do controle

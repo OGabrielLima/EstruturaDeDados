@@ -19,6 +19,7 @@ public class Principal{
         System.out.println("         *TrabalhoLabirintoPilhas.Labirinto*");
         labirinto.imprimeLabirinto(table);
         while(!labirinto.isFimLabirinto()) {
+            labirinto.imprimeLabirinto(table);
             table = labirinto.doMoverValidandoPosicao(table);
         }
         System.out.println("    *TrabalhoLabirintoPilhas.Labirinto Resolvido*");
